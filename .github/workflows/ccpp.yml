@@ -9,14 +9,8 @@ jobs:
     
     steps:
     - uses: actions/checkout@v1
-    - name: aclocal
-      run: aclocal
-    - name: libtoolize
-      run: libtoolize --ltdl --copy --force 
-    - name: automake
-      run: automake --add-missing --copy
-    - name: autoconf
-      run: autoconf
+    - name: build script
+      run: ./build.sh
     - name: configure
       run: ./configure
     - name: make
